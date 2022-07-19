@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imgs/favicon-32x32.png" />
+
+    <!-- Google Fonts (Open Sans & Poppins)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Font Awesome 6 Free-->
+
+    <link rel="stylesheet" href="css/huddle.css" />
+    <!-- Main Stylesheet-->
+
+    <title>Huddle Landing Page</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo"><img src="imgs/logo.svg" alt="Logo" /></a>
+        <button class="button-secondary">Try it free</button>
+      </div>
+    </nav>
+    <div class="header">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">Build The Community Your Fans Will Love</h1>
+          <p class="desc">
+            Huddle re-imagines the way we build communities. You have a voice, but so does your
+            audience. Create connections with your users as you engage in genuine discussion
+          </p>
+          <button class="button-primary">Get Started For Free</button>
+        </div>
+        <img class="image" src="imgs/screen-mockups.svg" alt="Header Image" />
+      </div>
+    </div>
+    <div class="counter">
+      <div class="container">
+        <div class="feature">
+          <img src="imgs/icon-communities.svg" alt="Image Ciommunities" class="icon" />
+          <h2 class="count">1.4K+</h2>
+          <span class="name">Communities Formed </span>
+        </div>
+        <div class="feature">
+          <img src="imgs/icon-messages.svg" alt="Image Messages" class="icon" />
+          <h2 class="count">2.7m+</h2>
+          <span class="name">Messages Sent</span>
+        </div>
+      </div>
+    </div>
+    <div class="main-section grow-together-section colored">
+      <div class="container">
+        <img class="image" src="imgs/illustration-grow-together.svg" alt="Grow Together" />
+        <div class="content">
+          <h2 class="title">Grow Together</h2>
+          <p class="desc">
+            Generate meaningful discussions with your audience and build a strong, loyal community.
+            Think of the insightful conversations you miss out on with a feedback form.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="main-section flowing-conversations-section">
+      <div class="container">
+        <img
+          src="imgs/illustration-flowing-conversation.svg"
+          alt="Flowing Conversations"
+          class="image"
+        />
+        <div class="content">
+          <h2 class="title">Flowing Conversations</h2>
+          <div class="desc">
+            You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+            just-in-time loading for a more natural flow.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-section your-users-section colored">
+      <div class="container">
+        <img src="imgs/illustration-your-users.svg" alt="Your Users" class="image" />
+        <div class="content">
+          <h2 class="title">Your Users</h2>
+          <p class="desc">
+            It takes no time at all to integrate Huddle with your app's authentication solution.
+            This means, once signed in to your app, your users can start chatting immediately.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="advertisement">
+      <div class="container">
+        <h2 class="title">Ready To Build Your Community?</h2>
+        <button class="button-primary">Get Started For Free</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="content">
+          <div class="about">
+            <img src="imgs/logo-footer.jpg" alt="Logo" class="logo" />
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit
+              lacinia vestibulum a, ultrices quis sem.
+            </p>
+          </div>
+          <div class="contact">
+            <div class="tel">
+              <img src="imgs/icon-phone.svg" alt="Phone Icon" class="icon" />
+              <span class="content">Phone: +1-543-123-4567</span>
+            </div>
+            <div class="email">
+              <img src="imgs/icon-email.svg" alt="Email Icon" class="icon" />
+              <span class="content">example@huddle.com</span>
+            </div>
+            <div class="social">
+              <a href="#" class="facebook icon"><i class="fa-brands fa-facebook-square"></i></a>
+              <a href="#" class="instagram icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="twitter icon"><i class="fa-brands fa-twitter-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter">
+          <h3 class="title">Newsletter</h3>
+          <p class="desc">
+            To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll
+            never send you spam or pass on your email address
+          </p>
+          <form action="" class="subscribe-form">
+            <div class="input-email-holder">
+              <input type="text" />
+              <label for="email_input">Check Your Email Please</label>
+            </div>
+            <input type="submit" value="Subscribe" onclick="submitEmailCheck(event)" />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Philopatire</a>.
+    </div>
+    <script>
+      function submitEmailCheck(event) {
+        let emailValue = document.querySelector(".input-email-holder input").value;
+        let inputEmailHolder = document.querySelector(".input-email-holder");
+        if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(emailValue)) {
+          inputEmailHolder.classList.remove("error");
+        } else {
+          inputEmailHolder.classList.add("error");
+          event.preventDefault();
+        }
+      }
+    </script>
+  </body>
+</html>
